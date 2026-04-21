@@ -9,13 +9,18 @@
 //senha: valor
 //telefone: valor
 
-let usuario ={
-    nome: 'Alex',
-    email: 'alex@gamil.com',
-    cargo: 'full Stack',
-    idade: 20,
-    senha: 'Alex123',
-    telefone: 99984686139
+let usuario = {
+  nome: prompt("Digite seu nome:"),
+  email: prompt("Digite seu email:"),
+  cargo: prompt("Digite seu cargo:"),
+  idade: prompt("Digite sua idade:"),
+  senha: prompt("Digite sua senha:"),
+  telefone: prompt("Digite seu telefone:"),
 }
 
-console.log(usuario);
+console.log("nome: " + usuario.nome)
+console.log("email: " + usuario.email)
+console.log("cargo: " + usuario.cargo)
+console.log("idade: " + usuario.idade)
+console.log("senha: " + usuario.senha)
+console.log("telefone: " + usuario.telefone)
