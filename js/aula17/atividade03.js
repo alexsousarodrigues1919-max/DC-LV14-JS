@@ -14,22 +14,26 @@ let produtos = [
     {nome: "Chinelo", preco: 20.00, etiqueta: "amarelo", departamento: "Calcados"}
 ]
 
-produtos.map((produto) => {
+
+
+let produtosComDesconto = produtos.map((produto) => {
     let desconto = 0;
     if (produto.etiqueta === "vermelho") {
-        desconto = produto.preco * 0.2;
+        desconto = produto.preco * 0.8;
     } else if (produto.etiqueta === "verde") {
-        desconto = produto.preco * 0.1;
+        desconto = produto.preco * 0.9;
     }
     else if (produto.etiqueta === "amarelo") {
-        desconto = produto.preco * 0.05;
+        desconto = produto.preco * 0.95;
     }
     let precoComDesconto = produto.preco - desconto;
     return { nome: produto.nome, preco: precoComDesconto };
 })
-.forEach((produto) => {
-    console.log(produto);
-});
+
+console.log(produtos);
+console.log(produtosComDesconto);
+
+
 //ao final mostre os dois arrays, o original e o novo array com os produtos e os preços com desconto.
 
 //saída esperada:
