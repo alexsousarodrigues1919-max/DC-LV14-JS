@@ -9,3 +9,4 @@ let somaComValorInicial = numeros.reduce((acumulador, valorAtual) => acumulador 
 //o segundo argumento do reduce é o valor inicial do acumulador. Se não for fornecido, o primeiro elemento do array será usado como valor inicial e a iteração começará a partir do segundo elemento.
 
 //Fazer o cálculo de vendas, considerando um valor do ano anterior 
+

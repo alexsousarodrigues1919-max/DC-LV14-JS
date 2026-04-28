@@ -25,3 +25,15 @@ let estoque = [
     { produto: 'Jaqueta', quantidade: 20, precoUnitario: 150 },
     { produto: 'Bermuda', quantidade: 40, precoUnitario: 80 }
 ]
+
+let valorTotalEstoque = estoque.reduce((total, item) => {
+    return total + (item.quantidade * item.precoUnitario)
+}, 0)
+
+console.log(`O valor total do estoque é: R$ ${valorTotalEstoque}`)
+
+let totalVendas2025 = vendas2025.reduce((total, venda) => {
+    return total + venda.valor
+}, 50000)
+
+console.log(`O total de vendas de 2024 e 2025 é: R$ ${totalVendas2025}`)
