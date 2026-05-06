@@ -70,7 +70,7 @@
       const nome = document.querySelector(".nome");
       const descricao = document.querySelector(".descricao");
       const preco = document.querySelector(".preco");
-      const produto = produtos[1];
+      const produto = produtos[0];
 
       card.classList.remove("d-none");
 
@@ -81,11 +81,16 @@
       nome.innerHTML = produto.nome;
 
       descricao.innerHTML = produto.descricao;
-      
+
       preco.innerHTML = produto.preco;
 
-      console.log(produto);
+      //adicione um botão ao exemplo anterior onde, ao clicar nele, seja exibido um alert com o texto "Produto 'nome do produto adicionado ao carrinho"
+      //importante! o evento precisa ser adicionado no arquivo js, não como atributo no html
+      const botao = document.querySelector("a.btn.btn-primary");
 
+      botao.addEventListener("click", function () {
+        alert(`Produto ${produto.nome} adicionado ao carrinho`);
+      });
     </script>
   </body>
 </html>
