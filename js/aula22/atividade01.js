@@ -39,6 +39,7 @@ async function mostrarUsuarios() {
     } catch (error) {
         console.error('Erro ao buscar usuários:', error);
     }
+    
 }
 
 mostrarUsuarios();
