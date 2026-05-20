@@ -6,6 +6,7 @@ import "./App.css";
 import MeuPrimeiroComponente from "./components/MeuPrimeiroComponente";
 import InfoUsuario from "./components/InfoUsuario";
 import InfoUsuarioProps from "./components/InfoUsuarioProps";
+import CardProduto from "./components/CardProduto";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -35,6 +36,30 @@ function App() {
           profissao="Analista de Dados"
           email="tX4oH@example.com"
         />
+      </div>
+      <div id="Atividade03">
+       <div style={{ display: "flex", gap: "20px" }}>
+
+      {/* Card sem promoção */}
+      <CardProduto
+        imagem="https://placehold.co/400"
+        nome="Notebook Gamer"
+        preco={4500}
+        descricao="Notebook potente para jogos."
+        promocao={false}
+      />
+
+      {/* Card com promoção */}
+      <CardProduto
+        imagem="https://placehold.co/400"
+        nome="Mouse RGB"
+        preco={200}
+        descricao="Mouse gamer com iluminação RGB."
+        promocao={true}
+        desconto={20}
+      />
+    </div>
+        
       </div>
     </>
   );
