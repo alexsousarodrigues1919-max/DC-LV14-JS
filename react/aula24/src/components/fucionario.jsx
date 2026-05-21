@@ -8,21 +8,47 @@ Dicas: Use o hook useState para armazenar os valores dos campos. Serão necessá
 import { useState } from "react";
 
 export default function Funcionario() {
-    const [nome, setNome] = useState("");
-    const [email, setEmail] = useState("");
-    const [cargo, setCargo] = useState("");
-    const [objFuncionario, setObjFuncionario] = useState({});
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [objFuncionario, setObjFuncionario] = useState({});
 
-    return (
-        <>
-            <input type="text" onChange={(e) => setNome(e.target.value)} /><br />
-            <input type="email" onChange={(e) => setEmail(e.target.value)} /><br />
-            <input type="text" onChange={(e) => setCargo(e.target.value)} /><br />
-            <button onClick={() => setObjFuncionario({nome, email, cargo})}>Cadastrar Funcionario</button>
-            <p>{objFuncionario.nome}</p>
-            <p>{objFuncionario.email}</p>
-            <p>{objFuncionario.cargo}</p>
-        </>
-    );
+  function funcionario1() {
+    if(nome == "" || email == "" || cargo == "") {
+      alert("por favor preencha todos os campos")
+    }
+    else {
+      setObjFuncionario({nome, email, cargo})
+      // limpar os inputs
+      setNome("")
+      setEmail("")
+      setCargo("")
+    }
+
+  }
+
+  return (
+    <>
+      <div>
+        <div>
+          <input type="text" onChange={(e) => setNome(e.target.value)} />
+          <br />
+          <input type="email" onChange={(e) => setEmail(e.target.value)} />
+          <br />
+          <input type="text" onChange={(e) => setCargo(e.target.value)} />
+          <br />
+          <button onClick={funcionario1}>
+            Cadastrar Funcionario
+          </button>
+        </div>
+        {objFuncionario && (
+          <div>
+            <p>Name: {objFuncionario.nome} </p>
+            <p>Email: {objFuncionario.email} </p>
+            <p>Cargo: {objFuncionario.cargo} </p>
+          </div>
+        )}
+      </div>
+    </>
+  );
 }
-
